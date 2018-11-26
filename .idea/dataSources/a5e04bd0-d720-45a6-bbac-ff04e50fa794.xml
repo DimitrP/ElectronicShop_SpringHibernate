@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="computersandaccessoriesDB@localhost">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.14">
+    <root id="1">
+      <ServerVersion>10.5</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="amazon_helper_db">
+      <ObjectId>16393</ObjectId>
+      <StateNumber>557</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="3" parent="1" name="book_storage_db">
+      <ObjectId>42458</ObjectId>
+      <StateNumber>1702</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="4" parent="1" name="computersandaccessoriesDB">
+      <ObjectId>41597</ObjectId>
+      <StateNumber>1280</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>506</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+      <Relations>sequence|table|43647|43649|1
+sequence|table|43655|43657|1
+sequence|table|43667|43669|1
+sequence|table|43675|43677|1
+sequence|table|43612|43614|1
+sequence|table|43620|43622|1
+sequence|table|43628|43630|1
+sequence|table|43636|43638|1
+</Relations>
+    </database>
+    <database id="5" parent="1" name="db">
+      <ObjectId>24973</ObjectId>
+      <StateNumber>925</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="6" parent="1" name="javashop">
+      <ObjectId>24576</ObjectId>
+      <StateNumber>568</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="7" parent="1" name="local_store">
+      <ObjectId>33334</ObjectId>
+      <StateNumber>1060</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="8" parent="1" name="postgres">
+      <ObjectId>13255</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <StateNumber>554</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="9" parent="1" name="storeDB">
+      <ObjectId>25044</ObjectId>
+      <StateNumber>964</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <role id="10" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="11" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="12" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="13" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="14" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="15" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="16" parent="4" name="information_schema">
+      <ObjectId>12965</ObjectId>
+      <StateNumber>354</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="17" parent="4" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <StateNumber>351</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="18" parent="4" name="pg_temp_1">
+      <ObjectId>11736</ObjectId>
+      <StateNumber>114</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="19" parent="4" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <StateNumber>1</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="20" parent="4" name="pg_toast_temp_1">
+      <ObjectId>11737</ObjectId>
+      <StateNumber>114</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="21" parent="4" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <StateNumber>352</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionTimestamp>2018-11-25.21:23:59.855</IntrospectionTimestamp>
+      <IntrospectionStateNumber>2579</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="22" parent="4" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="23" parent="4" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="24" parent="4" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="25" parent="4" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="26" parent="4" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="27" parent="4" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <extension id="28" parent="4" name="plpgsql">
+      <ObjectId>13241</ObjectId>
+      <Comment>PL/pgSQL procedural language</Comment>
+      <StateNumber>506</StateNumber>
+      <Version>1.0</Version>
+      <SchemaName>pg_catalog</SchemaName>
+      <SchemaId>11</SchemaId>
+    </extension>
+    <sequence id="29" parent="21" name="cart_id_seq">
+      <ObjectId>43612</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2559</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="30" parent="21" name="cart_item_id_seq">
+      <ObjectId>43620</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2560</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="31" parent="21" name="category_category_id_seq">
+      <ObjectId>43628</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2561</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="32" parent="21" name="news_id_seq">
+      <ObjectId>43636</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2562</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="33" parent="21" name="order_id_seq">
+      <ObjectId>43647</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2563</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="34" parent="21" name="product_product_id_seq">
+      <ObjectId>43655</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2564</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="35" parent="21" name="role_id_seq">
+      <ObjectId>43667</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2565</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="36" parent="21" name="user_id_seq">
+      <ObjectId>43675</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2566</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <table id="37" parent="21" name="cart">
+      <ObjectId>43614</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2577</StateNumber>
+    </table>
+    <table id="38" parent="21" name="cart_item">
+      <ObjectId>43622</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2573</StateNumber>
+    </table>
+    <table id="39" parent="21" name="category">
+      <ObjectId>43630</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2576</StateNumber>
+    </table>
+    <table id="40" parent="21" name="news">
+      <ObjectId>43638</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2562</StateNumber>
+    </table>
+    <table id="41" parent="21" name="order">
+      <ObjectId>43649</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2575</StateNumber>
+    </table>
+    <table id="42" parent="21" name="product">
+      <ObjectId>43657</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2576</StateNumber>
+    </table>
+    <table id="43" parent="21" name="role">
+      <ObjectId>43669</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2578</StateNumber>
+    </table>
+    <table id="44" parent="21" name="user">
+      <ObjectId>43677</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2579</StateNumber>
+    </table>
+    <table id="45" parent="21" name="user_role">
+      <ObjectId>43687</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2579</StateNumber>
+    </table>
+    <column id="46" parent="37" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2559</StateNumber>
+      <DefaultExpression>nextval(&apos;cart_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="47" parent="37" name="sum">
+      <Position>2</Position>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>2559</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <index id="48" parent="37" name="cart_pkey">
+      <ObjectId>43618</ObjectId>
+      <StateNumber>2559</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="49" parent="37" name="cart_pkey">
+      <ObjectId>43619</ObjectId>
+      <StateNumber>2559</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>cart_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="50" parent="38" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2560</StateNumber>
+      <DefaultExpression>nextval(&apos;cart_item_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="51" parent="38" name="count">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>2560</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="52" parent="38" name="cart_id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>2560</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="53" parent="38" name="product_id">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>2560</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="54" parent="38" name="cart_item_pkey">
+      <ObjectId>43626</ObjectId>
+      <StateNumber>2560</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="55" parent="38" name="cart_item_pkey">
+      <ObjectId>43627</ObjectId>
+      <StateNumber>2560</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>cart_item_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="56" parent="38" name="fk_n7d76evrrkrg1cva2ewnh57hn">
+      <ObjectId>43696</ObjectId>
+      <StateNumber>2572</StateNumber>
+      <ColNames>cart_id</ColNames>
+      <RefTableId>43614</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>cart</RefTableName>
+      <RefKeyName>cart_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="57" parent="38" name="fk_r5b99rvdnupujm2h7hh2bh6m7">
+      <ObjectId>43701</ObjectId>
+      <StateNumber>2573</StateNumber>
+      <ColNames>product_id</ColNames>
+      <RefTableId>43657</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>product</RefTableName>
+      <RefKeyName>product_pkey</RefKeyName>
+      <RefColNames>product_id</RefColNames>
+    </foreign-key>
+    <column id="58" parent="39" name="category_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2561</StateNumber>
+      <DefaultExpression>nextval(&apos;category_category_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="59" parent="39" name="description">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2561</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="60" parent="39" name="title">
+      <Position>3</Position>
+      <DataType>varchar(64)|0s</DataType>
+      <StateNumber>2561</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="61" parent="39" name="category_pkey">
+      <ObjectId>43634</ObjectId>
+      <StateNumber>2561</StateNumber>
+      <ColNames>category_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="62" parent="39" name="uk_lnmf77qvjnr2lmyxrrydom9hd">
+      <ObjectId>43692</ObjectId>
+      <StateNumber>2569</StateNumber>
+      <ColNames>title</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="63" parent="39" name="category_pkey">
+      <ObjectId>43635</ObjectId>
+      <StateNumber>2561</StateNumber>
+      <ColNames>category_id</ColNames>
+      <UnderlyingIndexName>category_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="64" parent="39" name="uk_lnmf77qvjnr2lmyxrrydom9hd">
+      <ObjectId>43693</ObjectId>
+      <StateNumber>2569</StateNumber>
+      <ColNames>title</ColNames>
+      <UnderlyingIndexName>uk_lnmf77qvjnr2lmyxrrydom9hd</UnderlyingIndexName>
+    </key>
+    <column id="65" parent="40" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2562</StateNumber>
+      <DefaultExpression>nextval(&apos;news_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="66" parent="40" name="date">
+      <Position>2</Position>
+      <DataType>date|0s</DataType>
+      <StateNumber>2562</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="67" parent="40" name="description">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2562</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="68" parent="40" name="news_image_link">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2562</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="69" parent="40" name="title">
+      <Position>5</Position>
+      <DataType>varchar(32)|0s</DataType>
+      <StateNumber>2562</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="70" parent="40" name="news_pkey">
+      <ObjectId>43645</ObjectId>
+      <StateNumber>2562</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="71" parent="40" name="news_pkey">
+      <ObjectId>43646</ObjectId>
+      <StateNumber>2562</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>news_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="72" parent="41" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2563</StateNumber>
+      <DefaultExpression>nextval(&apos;order_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="73" parent="41" name="date">
+      <Position>2</Position>
+      <DataType>date|0s</DataType>
+      <StateNumber>2563</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="74" parent="41" name="status">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>2563</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="75" parent="41" name="cart_id">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>2563</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="76" parent="41" name="user_id">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>2563</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="77" parent="41" name="order_pkey">
+      <ObjectId>43653</ObjectId>
+      <StateNumber>2563</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="78" parent="41" name="order_pkey">
+      <ObjectId>43654</ObjectId>
+      <StateNumber>2563</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>order_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="79" parent="41" name="fk_n2tj9tbceb4k7it4y6vcsfs7b">
+      <ObjectId>43706</ObjectId>
+      <StateNumber>2574</StateNumber>
+      <ColNames>cart_id</ColNames>
+      <RefTableId>43614</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>cart</RefTableName>
+      <RefKeyName>cart_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="80" parent="41" name="fk_mh40cn97o5svvy5c32ws9tnvp">
+      <ObjectId>43711</ObjectId>
+      <StateNumber>2575</StateNumber>
+      <ColNames>user_id</ColNames>
+      <RefTableId>43677</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>user</RefTableName>
+      <RefKeyName>user_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="81" parent="42" name="product_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2564</StateNumber>
+      <DefaultExpression>nextval(&apos;product_product_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="82" parent="42" name="active">
+      <Position>2</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>2564</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="83" parent="42" name="description">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2564</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="84" parent="42" name="price">
+      <Position>4</Position>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>2564</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="85" parent="42" name="quantity">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>2564</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="86" parent="42" name="small_image_link">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2564</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="87" parent="42" name="title">
+      <Position>7</Position>
+      <DataType>varchar(64)|0s</DataType>
+      <StateNumber>2564</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="88" parent="42" name="category_id">
+      <Position>8</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>2564</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="89" parent="42" name="product_pkey">
+      <ObjectId>43665</ObjectId>
+      <StateNumber>2564</StateNumber>
+      <ColNames>product_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="90" parent="42" name="product_pkey">
+      <ObjectId>43666</ObjectId>
+      <StateNumber>2564</StateNumber>
+      <ColNames>product_id</ColNames>
+      <UnderlyingIndexName>product_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="91" parent="42" name="fk_rlaghtegr0yx2c1q1s6nkqjlh">
+      <ObjectId>43716</ObjectId>
+      <StateNumber>2576</StateNumber>
+      <ColNames>category_id</ColNames>
+      <RefTableId>43630</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>category</RefTableName>
+      <RefKeyName>category_pkey</RefKeyName>
+      <RefColNames>category_id</RefColNames>
+    </foreign-key>
+    <column id="92" parent="43" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2565</StateNumber>
+      <DefaultExpression>nextval(&apos;role_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="93" parent="43" name="name">
+      <Position>2</Position>
+      <DataType>varchar(32)|0s</DataType>
+      <StateNumber>2565</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="94" parent="43" name="role_pkey">
+      <ObjectId>43673</ObjectId>
+      <StateNumber>2565</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="95" parent="43" name="role_pkey">
+      <ObjectId>43674</ObjectId>
+      <StateNumber>2565</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>role_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="96" parent="44" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2566</StateNumber>
+      <DefaultExpression>nextval(&apos;user_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="97" parent="44" name="active">
+      <Position>2</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>2566</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="98" parent="44" name="email">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2566</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="99" parent="44" name="login">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2566</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="100" parent="44" name="password">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>2566</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="101" parent="44" name="cart_id">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>2566</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="102" parent="44" name="user_pkey">
+      <ObjectId>43685</ObjectId>
+      <StateNumber>2566</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="103" parent="44" name="uk_ew1hvam8uwaknuaellwhqchhb">
+      <ObjectId>43694</ObjectId>
+      <StateNumber>2571</StateNumber>
+      <ColNames>login</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="104" parent="44" name="user_pkey">
+      <ObjectId>43686</ObjectId>
+      <StateNumber>2566</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>user_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="105" parent="44" name="uk_ew1hvam8uwaknuaellwhqchhb">
+      <ObjectId>43695</ObjectId>
+      <StateNumber>2571</StateNumber>
+      <ColNames>login</ColNames>
+      <UnderlyingIndexName>uk_ew1hvam8uwaknuaellwhqchhb</UnderlyingIndexName>
+    </key>
+    <foreign-key id="106" parent="44" name="fk_47dq8urpj337d3o65l3fsjph3">
+      <ObjectId>43721</ObjectId>
+      <StateNumber>2577</StateNumber>
+      <ColNames>cart_id</ColNames>
+      <RefTableId>43614</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>cart</RefTableName>
+      <RefKeyName>cart_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="107" parent="45" name="user_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2567</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="108" parent="45" name="role_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2567</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="109" parent="45" name="user_role_pkey">
+      <ObjectId>43690</ObjectId>
+      <StateNumber>2567</StateNumber>
+      <ColNames>user_id
+role_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="110" parent="45" name="user_role_pkey">
+      <ObjectId>43691</ObjectId>
+      <StateNumber>2567</StateNumber>
+      <ColNames>user_id
+role_id</ColNames>
+      <UnderlyingIndexName>user_role_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="111" parent="45" name="fk_apcc8lxk2xnug8377fatvbn04">
+      <ObjectId>43731</ObjectId>
+      <StateNumber>2579</StateNumber>
+      <ColNames>user_id</ColNames>
+      <RefTableId>43677</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>user</RefTableName>
+      <RefKeyName>user_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="112" parent="45" name="fk_it77eq964jhfqtu54081ebtio">
+      <ObjectId>43726</ObjectId>
+      <StateNumber>2578</StateNumber>
+      <ColNames>role_id</ColNames>
+      <RefTableId>43669</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>role</RefTableName>
+      <RefKeyName>role_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

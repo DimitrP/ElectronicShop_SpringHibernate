@@ -1,0 +1,108 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" >
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>-->
+
+    <!-- Bootstrap CSS -->
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+ <!--<link rel="stylesheet" href="style.css">-->
+
+
+    <title>REGISTRATION</title>
+  </head>
+  <body>
+
+  <div th:include="/fragments/header :: header"></div>
+
+<form th:action="@{/registration}" th:object="${user}" method="post" style="width:300px; height: 700px; position: absolute; left: 50%; top:35%; transform: translate(-50%, -50%);" >
+
+    <div class="form-group" >
+        <h1 class="h3 mb-3 font-weight-normal">Please register</h1>
+          <label for="exampleInputEmail1">Login</label>
+          <input th:field="*{login}" type="text" class="form-control" id="exampleLogin1" aria-describedby="emailHelp" placeholder="Login"/>
+              <div th:if="${#fields.hasErrors('login')}" th:errors="*{login}"
+                   class="alert alert-danger bg-error">Login Error. Try another?
+              </div>
+    </div>
+
+    <div class="form-group" >
+          <label for="exampleInputEmail1">Email address</label>
+        <input th:field="*{email}" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+                  <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
+                       class="alert alert-danger bg-error">Email Error. Try another?
+                  </div>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input th:field="*{password}" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
+            <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}"
+                 class="alert alert-danger bg-error">Email Error. Try another?
+            </div>
+    </div>
+
+    <div class="form-group">
+    <label for="exampleInputPassword1"> Confirm password</label>
+    <input th:field="*{passwordConfirmation}" type="password" class="form-control" id="exampleInputPassword2" placeholder="Password"/>
+        <div th:if="${#fields.hasErrors('passwordConfirmation')}" th:errors="*{passwordConfirmation}"
+             class="alert alert-danger bg-error">Password confirmation Error. Try another combination?
+        </div>
+  </div>
+
+
+    <button type="submit" class="btn btn-lg btn-info btn-block" >Register</button>
+
+</form>
+
+  <!--<button type="submit" class="btn btn-lg btn-info btn-block" >Register</button>-->
+
+  <!--<form action=""></form>-->
+  <!--<form style="width:300px; position: absolute; left: 50%; top:25%; transform: translate(-50%, -50%);">-->
+      <!--<h3>Register,please</h3>-->
+      <!--<div class="form-group">-->
+          <!--<label for="formGroupExampleInput">Enter your login</label>-->
+          <!--<input th:field="*{login}" type="text" class="form-control" id="formGroupExampleInput" placeholder="LOGIN">-->
+          <!--<div th:if="${#fields.hasErrors('login')}" th:errors="*{login}"-->
+               <!--class="alert alert-danger bg-error">Login Error. Try another?-->
+          <!--</div>-->
+      <!--</div>-->
+
+
+      <!--<div class="form-group">-->
+      <!--<label for="formGroupExampleInput">Enter your email</label>-->
+      <!--<input th:field="*{email}" type="email" class="form-control" id="formGroupExampleInput" placeholder="EMAIL">-->
+          <!--<div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"-->
+               <!--class="alert alert-danger bg-error">Email Error. Try another?-->
+          <!--</div>-->
+      <!--</div>-->
+          <!--<div class="form-group">-->
+          <!--<label for="formGroupExampleInput2">Enter password</label>-->
+          <!--<input th:field="*{password}" type="password" class="form-control" id="formGroupExampleInput2" placeholder="Password">-->
+
+              <!--<div th:if="${#fields.hasErrors('password')}" th:errors="*{password}"-->
+               <!--class="alert alert-danger bg-error">Email Error. Try another?-->
+          <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="form-group">-->
+          <!--<label for="formGroupExampleInput2">Confirm password</label>-->
+          <!--<input th:field="*{passwordConfirmation}" type="text" class="form-control" id="formGroupExampleInput2" placeholder="password">-->
+          <!--<div th:if="${#fields.hasErrors('passwordConformation')}" th:errors="*{passwordConfirmation}"-->
+               <!--class="alert alert-danger bg-error">Password confirmation Error. Try another combination?-->
+          <!--</div>-->
+      <!--</div>-->
+      <!--<button type="submit" class="btn btn-lg btn-info btn-block" >Register</button>-->
+
+
+  <!--</form>-->
+
+
+    <div th:include="/fragments/footer :: footer"></div>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Product detail</title>
+</head>
+<body>
+<div th:include="/fragments/header :: header"></div>
+
+<div class="container">
+    <br>
+
+    <div class="card bg-light" style="width: 100%;">
+        <img th:src="${product.smallImageLink}"  class="card-img-top" style="width: 50%"  alt="Card image cap">
+        <div class="card-block">
+
+            <!--<hr style="width: 50%; align: left">-->
+
+            <h3>Title</h3>
+
+            <h5 class="card-title" th:text="${product.title}"></h5>
+            <hr>
+            <h3>Price </h3>
+            <h3 th:text="${product.price}"></h3>
+            <hr>
+            <h3>Product description</h3>
+            <p class="card-text" th:text="${product.description}"></p>
+
+            <!--<a href="#" class="btn btn-info">Go somewhere</a>-->
+        </div>
+
+
+            <div class="card-footer">
+                <a class="buy btn btn-outline-info"
+                   data-toggle="modal"
+                   data-target="#modalBuy"
+                   th:attr="data-id=${product.product_id}"
+                   th:href="@{/cart/buy}">
+
+                    <div class="material-icons md-14">shopping_cart</div> Add to cart!</a>
+            </div>
+
+            <!--<button type="button" class=" btn btn-outline-info">-->
+
+                <!--<a class="buy"-->
+                        <!--data-toggle="modal"-->
+                   <!--data-target="#modalBuy"-->
+                   <!--th:attr="data-id=${product.product_id}"-->
+                   <!--th:href="@{/cart/buy}">-->
+
+
+
+                <!--<div class="material-icons ">shopping_cart  </div></a>-->
+
+                <!--ADD TO CART-->
+            <!--</button>-->
+        </div>
+
+
+
+
+
+</div>
+
+<div th:include="/fragments/footer :: footer"></div>
+</body>
+</html>

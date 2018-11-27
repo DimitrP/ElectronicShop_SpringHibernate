@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All users</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<!--Template Header-->
+<div th:include="/fragments/header :: header"></div>
+
+<div class="container">
+
+    <a class="btn btn-success" href="addProduct">Add Product</a>
+
+    <table class="table" th:unless="${#lists.isEmpty(product)}">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Icon</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Active</th>
+            <th>Price</th>
+            <th>Category</th>
+
+            <th>Update Product</th>
+            <th>Delete Product</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product : ${product}">
+            <td th:text="${product.product_id}">Id</td>
+            <td><img th:src="${product.smallImageLink}"/></td>
+            <td th:text="${product.title}">Title</td>
+            <td th:text="${product.description}">Description</td>
+            <td th:text="${product.quantity}">Quantity</td>
+            <td th:text="${product.active}">Active</td>
+            <td th:text="${product.price}">Price</td>
+            <td th:text="${product.category.title}">Category</td>
+
+            <td><a th:href="@{updateProduct/{id}(id=${product.product_id})}">Update Product</a></td>
+            <td><a th:href="@{deleteProduct/{id}(id=${product.product_id})}">Delete Product</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<!--Template footer-->
+<div th:include="/fragments/footer :: footer"></div>
+
+</body>
+</html>

@@ -57,20 +57,20 @@ public class NewsDAOImpl extends AbstractDAO implements NewsDAO {
     @Override
     public void addNews(News news) {
         getSession().save(news);
-        LOGGER.info("News has added successfully ", news);
+        LOGGER.info("News has been added successfully ", news);
     }
 
     @Override
     public  void updateNews(News news){
         getSession().update(news);
-        LOGGER.info("News has updated succcessfully ", news);
+        LOGGER.info("News has been updated successfully ", news);
     }
 
     @Override
     public void deleteNews(Integer id){
         News news = (News) getSession().load(News.class, id);
         if(news != null){
-            LOGGER.info("News successfully remove ", news);
+            LOGGER.info("News has been successfully remove ", news);
             getSession().delete(news);
         }
     }

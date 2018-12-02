@@ -16,21 +16,76 @@
 
             <form action="#" th:action="@{/admin/order/updateOrder}" th:object="${order}" method="post">
 
-                <input th:field="*{id}" type="hidden" name="id"/>
-                <input th:field="*{cart.id}" type="hidden" name="cart"/>
-                <input th:field="*{user.id}" type="hidden" name="user"/>
+                <input  th:field="*{id}"  type="text"  name="id"/>
+                <input  th:field="*{cart.id}"  type="text" id="cart" name="cart"/>
+                <input  th:field="*{user.id}"  type="text" id="user" name="user"/>
+                <input  th:field="*{user.login}" type="text" id="login" name="login"/>
+
+
+
+                <select>
+                    <option th:each="status : ${T(com.pershyn.electronicshop.model.Status).values()}"
+                            th:id="${status}"
+                            th:value="${status}"
+                            th:text="${status}" name="status">
+                    </option>
+                </select>
+
+
+
+                <!--<input  th:value="1" type="number" id="status" name="status"/>-->
+
+                <input  th:field="*{date}" type="text" id="date" name="date"/>
+                <input  th:field="*{cart.sum}" type="text" name="sum"/>
+                <!--<input th:field="*{cart.item.product.product_id}" type="hidden" name="product_id"/>-->
+
+
+
+
+                <!--<td>-->
+                    <!--<table class="table-sm">-->
+                        <!--<thead>-->
+                        <!--<tr>-->
+                            <!--<th>ITEM ID</th>-->
+                            <!--<th>PRODUCT TITLE</th>-->
+                            <!--<th>QUANTITY</th>-->
+                        <!--</tr>-->
+                        <!--</thead>-->
+
+                        <!--<tbody>-->
+                        <!--<tr th:each="item : ${order.cart.items}">-->
+                            <!--<td><input th:value="${item.id}"  id="id" type="text" name="id"/></td>-->
+                            <!--<td><input th:value="${item.product.title} " id="title" name="title"/></td>-->
+                            <!--<td><input th:value="${item.count}" id="count" name="count"/></td>-->
+                        <!--</tr>-->
+                        <!--</tbody>-->
+                    <!--</table>-->
+                <!--</td>-->
+
+
+
+
+                <!--<div class="form-group row">-->
+                    <!--<label class="form-control-label" for="DATE">DATE:</label>-->
+                    <!--<input hidden th:value="*{date}" class="form-control" id="date" type="date" name="date"/>-->
+                <!--</div>-->
+
+                <!--<div class="form-group row">-->
+                    <!--<label class="form-control-label" for="STATUS">STATUS:</label>-->
+                    <!--<input hidden th:value="*{status}" class="form-control" id="status"  name="status"/>-->
+                <!--</div>-->
+
+                <!--<div class="form-group row">-->
+                    <!--<label class="form-control-label" for="SUM">SUM:</label>-->
+                    <!--<input th:field="*{cart.sum}" class="form-control" id="SUM" type="text" name="sum"/>-->
+                <!--</div>-->
 
                 <div class="form-group row">
-                    <label class="form-control-label" for="DATE">DATE:</label>
-                    <input th:field="*{date}" class="form-control" id="DATE" type="text" name="date"/>
-                </div>
-
-                <div class="form-group row">
 
 
                 </div>
 
-                <input class="btn btn-primary" name="submit" type="submit" value="Update"/>
+                <input class="btn btn-outline-info" name="submit" type="submit" value="Update"/>
 
             </form>
         </div>

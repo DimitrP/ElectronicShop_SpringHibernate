@@ -25,7 +25,7 @@ public class OrderDAOImpl extends AbstractDAO implements OrderDAO {
 
     @Override
     public void updateOrder(Order order) {
-        getSession().update(order);
+        getSession().saveOrUpdate(order);
     }
 
     @Override

@@ -26,6 +26,10 @@
                 <a th:href="@{/news/detail/{id}(id=${news.id})}">
                     <img class="d-block img-fluid" th:src="${news.newsImageLink}" alt="Card newsImageLink cap"/>
                 </a>
+                <div class="carousel-caption d-none d-md-block">
+                    <a th:href="@{/news/detail/{id}(id=${news.id})}"><h3 style="color: white" th:text="${news.title}"></h3></a>
+                    <!--<p th:text="${news.description}"></p>-->
+                </div>
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -44,11 +48,11 @@
     <div class="row " style="margin-top: 20px";>
 
 
-        <div class="card-deck col  " th:each="product : ${newProducts}">
+        <div class="card-deck col row-eq-height " th:each="product : ${newProducts}">
             <div class="card bg-light" style="min-width: 200px">
 
                 <a th:href="@{/product/detail/{id}(id=${product.product_id})}">
-                     <img class="card-img-top card-image-fixheight" th:src="${product.smallImageLink}" alt="Card image cap">
+                     <img style="max-height: 200px; min-height: 200px" class="card-img-top card-image-fixheight" th:src="${product.smallImageLink}" alt="Card image cap">
                 </a>
 
 

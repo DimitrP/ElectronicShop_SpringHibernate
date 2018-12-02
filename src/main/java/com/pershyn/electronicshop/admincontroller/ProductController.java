@@ -51,7 +51,7 @@ public class ProductController {
     }
 
     @RequestMapping(value = "/addProduct", method = RequestMethod.POST)
-    public ModelAndView addProduct(@ModelAttribute Product product, BindingResult result,
+    public ModelAndView addProduct(@ModelAttribute Product product,
                                 ModelAndView modelAndView, RedirectAttributes redirectAttributes) {
         productService.addProduct(product);
         redirectAttributes.addFlashAttribute("success", "Product has been added: " + product);
@@ -63,13 +63,31 @@ public class ProductController {
         ModelAndView modelAndView = new ModelAndView(updateProductView);
         Product product = productService.getProductById(id);
         if (product.getProduct_id() == null) {
-            redirectAttrs.addFlashAttribute("error", "Not selected product");
+            redirectAttrs.addFlashAttribute("error", "No selected product");
             return new ModelAndView("redirect:" + indexProductView);
         }
         product = productService.getProductById(product.getProduct_id());
         modelAndView.addObject("product", product);
         return getProductModelAndView(modelAndView, product);
     }
+
+
+//    @RequestMapping(value = {"/updateProduct/{id}", "/updateProduct"}, method = RequestMethod.GET)
+//    public ModelAndView updateProduct(Product product, RedirectAttributes redirectAttrs) {
+//        ModelAndView modelAndView = new ModelAndView(updateProductView);
+//        if (product.getProduct_id() == null) {
+//            redirectAttrs.addFlashAttribute("error", "No selected product");
+//            return new ModelAndView("redirect:" + indexProductView);
+//        }
+//        product = productService.getProductById(product.getProduct_id());
+//        modelAndView.addObject("product", product);
+//        return getProductModelAndView(modelAndView, product);
+//    }
+
+
+
+
+
 
     @RequestMapping(value = {"/updateProduct"}, method = RequestMethod.POST)
     public ModelAndView updateProduct(@Valid @ModelAttribute Product product,

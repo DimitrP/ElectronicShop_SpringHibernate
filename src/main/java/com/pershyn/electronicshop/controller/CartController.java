@@ -104,7 +104,7 @@ public class CartController {
 
     @ResponseBody
     @RequestMapping(value = {"/cart/buy"})
-    public String buyGood(@RequestBody String id) {
+    public String buyProduct(@RequestBody String id) {
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String userName = authentication.getName();

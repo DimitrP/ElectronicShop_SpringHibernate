@@ -16,7 +16,8 @@
 
             <form action="#" th:action="@{/admin/user/addUser}" th:object="${user}" method="post">
 
-                <input hidden th:field="*{id}" type="text" name="id"/>
+
+                <!--<input hidden th:field="*{passwordConfirmation}" type="text" name="confPas"/>-->
 
                 <div class="form-group row">
                     <label class="form-control-label" for="LOGIN">LOGIN:</label>
@@ -28,9 +29,17 @@
 
                 <div class="form-group row">
                     <label class="form-control-label" for="PASSWORD">PASSWORD:</label>
-                    <input th:field="*{password}" class="form-control" id="PASSWORD" type="text" name="password"/>
+                    <input th:field="*{password}" class="form-control" id="PASSWORD" type="password" name="password"/>
                     <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}"
                          class="alert alert-danger bg-error">Password Error. Try another?
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="form-control-label" for="PASSWORD_CONFIRMATION">PASSWORD CONFIRMATION:</label>
+                    <input th:field="*{passwordConfirmation}" class="form-control" id="PASSWORD_CONFIRMATION" type="password" name="PASSWORD_CONFIRMATION"/>
+                    <div th:if="${#fields.hasErrors('passwordConfirmation')}" th:errors="*{passwordConfirmation}"
+                         class="alert alert-danger bg-error">Password Confirmation Error. Try another?
                     </div>
                 </div>
 
@@ -52,7 +61,7 @@
                     </select>
                 </div>
 
-                <input class="btn btn-primary" name="submit" type="submit" value="ADD"/>
+                <input class="btn btn-info" name="submit" type="submit" value="ADD"/>
             </form>
         </div>
     </div>

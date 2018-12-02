@@ -20,7 +20,12 @@
 
                 <div class="form-group row">
                     <label class="form-control-label" for="TITLE">TITLE:</label>
-                    <input th:field="*{title}" class="form-control" id="TITLE" type="text" name="title"/>
+                    <input th:field="*{newsImageLink}" class="form-control" id="TITLE" type="text" name="title"/>
+                </div>
+
+                <div class="form-group row">
+                    <label class="form-control-label" for="IMAGE LINK">TITLE:</label>
+                    <input th:field="*{title}" class="form-control" id="IMAGE LINK" type="text" name="title"/>
                 </div>
 
                 <div class="form-group row">
@@ -33,7 +38,7 @@
                     <input th:field="*{date}" class="form-control" id="DATE" type="text" name="date"/>
                 </div>
 
-                <input class="btn btn-primary" name="submit" type="submit" value="Update"/>
+                <input class="btn btn-outline-info" name="submit" type="submit" value="Update"/>
 
             </form>
         </div>

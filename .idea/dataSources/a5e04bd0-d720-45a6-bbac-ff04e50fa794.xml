@@ -25,10 +25,10 @@
 sequence|table|43655|43657|1
 sequence|table|43667|43669|1
 sequence|table|43675|43677|1
-sequence|table|43612|43614|1
-sequence|table|43620|43622|1
 sequence|table|43628|43630|1
 sequence|table|43636|43638|1
+sequence|table|43612|43614|1
+sequence|table|43620|43622|1
 </Relations>
     </database>
     <database id="5" parent="1" name="db">

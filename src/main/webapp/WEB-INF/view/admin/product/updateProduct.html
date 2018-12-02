@@ -16,11 +16,16 @@
 
             <form action="#" th:action="@{/admin/product/updateProduct}" th:object="${product}" method="post">
 
-                <input th:value="${product.product_id}" type="hidden" name="id"/>
-
+                <!--<input th:value="${product_id}" type="hidden" name="id"/>-->
+                <input hidden th:field="*{product_id}" type="text" name="product_id"/>
                 <div class="form-group row">
                     <label class="form-control-label" for="TITLE">TITLE:</label>
                     <input th:field="*{title}" class="form-control" id="TITLE" type="text" name="title"/>
+                </div>
+
+                <div class="form-group row">
+                    <label class="form-control-label" for="IMAGE LINK">TITLE:</label>
+                    <input th:field="*{smallImageLink}" class="form-control" id="IMAGE LINK" type="text" name="title"/>
                 </div>
 
                 <div class="form-group row">
@@ -69,7 +74,7 @@
                     </select>
                 </div>
 
-                <input class="btn btn-primary" name="submit" type="submit" value="Update"/>
+                <input class="btn btn-outline-info" name="submit" type="submit" value="Update"/>
             </form>
         </div>
     </div>

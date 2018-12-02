@@ -44,7 +44,7 @@
                                 <div class="card-text">
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item price">
-                                            Price:&nbsp;<span th:text="${item.product.price}">Price</span>&nbsp;RUB
+                                            Price:&nbsp;<span th:text="${item.product.price}">Price</span>&nbsp;USD
                                         </li>
                                         <li class="list-group-item price">
                                             <div class="row">
@@ -69,11 +69,11 @@
         <div class="row">
             <div class="col-md-4">
                 <h3>
-                    SUM <span th:text="${cart.sum}"></span> RUB
+                    Total&nbsp<span th:text="${cart.sum}"></span>&nbspUSD
                 </h3>
             </div>
         </div>
-        <a style="margin-top: 20px" class="btn btn-success btn-outline-info" th:href="@{/order/create}">Buy all...</a>
+        <a style="margin-top: 20px" class="btn btn-success btn-outline-info" th:href="@{/order/create}">Buy...</a>
     </div>
 
     <div th:if="${#lists.isEmpty(items)}">

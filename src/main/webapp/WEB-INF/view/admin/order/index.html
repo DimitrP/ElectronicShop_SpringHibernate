@@ -14,15 +14,15 @@
     <table class="table table-bordered" th:unless="${#lists.isEmpty(orders)}">
         <thead>
         <tr>
-            <th>Id</th>
-            <th>User ID</th>
-            <th>User Login</th>
-            <th>Items</th>
-            <th>Status</th>
-            <th>Created</th>
-            <th>Sum</th>
+            <th>ID</th>
+            <th>USER ID</th>
+            <th>USER LOGIN</th>
+            <th>ITEMS</th>
+            <th>STATUS</th>
+            <th>CREATED</th>
+            <th>SUM</th>
 
-            <th>Update Order</th>
+            <!--<th>UPDATE ORDER</th>-->
 
         </tr>
         </thead>
@@ -36,16 +36,17 @@
                 <table class="table-sm">
                     <thead>
                     <tr>
-                        <th>Item Id</th>
-                        <th>Good</th>
-                        <th>Count</th>
+                        <th>ITEM ID</th>
+                        <th>PRODUCT TITLE</th>
+                        <th>QUANTITY</th>
                     </tr>
                     </thead>
+
                     <tbody>
                     <tr th:each="item : ${order.cart.items}">
-                        <td th:text="${item.id}">Id</td>
-                        <td th:text="${item.good.title}">Good Title</td>
-                        <td th:text="${item.count}">User Login</td>
+                        <td th:text="${item.id}">ITEM ID</td>
+                        <td th:text="${item.product.title}">PRODUCT TITLE</td>
+                        <td th:text="${item.count}">QUANTITY</td>
                     </tr>
                     </tbody>
                 </table>
@@ -57,7 +58,7 @@
 
             <td th:text="${order.cart.sum}">Sum</td>
 
-            <td><a th:href="@{updateOrder/{id}(id=${order.id})}">Update Order</a></td>
+            <!--<td><a th:href="@{updateOrder/{id}(id=${order.id})}">Update Order</a></td>-->
 
         </tr>
         </tbody>

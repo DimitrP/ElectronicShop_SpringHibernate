@@ -7,13 +7,10 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('a.buy').click(function (event) {
         event.preventDefault();
-        // очищаем содержимое модального окна
         $(".modal-info").empty();
-        // принимаем значения url и id товара из ссылки
         var url = $(this).attr("href");
         var goodId = $(this).data("id");
 
-        // делаем POST запрос
         $.ajax({
             url: url,
             headers: {
@@ -34,12 +31,9 @@ $(document).ready(function () {
 
     $('button.good-calc').click(function (event) {
         event.preventDefault();
-        // Идентификатор item'a - сущность, которая представляет товар
         var itemId = $(this).data("id");
-        // Если у кнопки есть класс 'good-calc-up', значит мы прибавляем
         var isPlus = $(this).hasClass('good-calc-up');
 
-        // делаем POST запрос
         $.ajax({
             url: "/cart/calculate",
             headers: {

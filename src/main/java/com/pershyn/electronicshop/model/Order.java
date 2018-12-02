@@ -28,7 +28,7 @@ public class Order {
 
     @CreationTimestamp
     @Temporal(TemporalType.DATE)
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    @DateTimeFormat(pattern = "MM/dd/yyyy")
     @Column(name = "date")
     private Date date;
 

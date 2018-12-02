@@ -1,12 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+<div th:include="/fragments/header :: header"></div>
 
-There is nothing here now !
 
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+
+                <img  th:src="@{/resources/img/error.png}"/>
+                <a href="/"><button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button></a>
+
+            </div>
+        </div>
+
+<!--<h1 style="text-align: center" >There is nothing here now !</h1>-->
+<!--<img style="margin-left: 40%" th:src="@{/resources/img/error.png}"/>-->
+<!--<a href="/"><button>Click</button></a>-->
+<!--<button th:href="/"> </button>-->
 </body>
 </html>

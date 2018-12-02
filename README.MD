@@ -28,34 +28,57 @@ Description of the application
     -   view detail page of the product
     -   add product to the cart
     -   update cart
+    
             delete product
+            
             change quantity of items
+            
         	buy items in the cart
         	
     -   browse history of orders
     -   browse news
+    
             view catalog of news
+            
             view news detail page
 
 -	Administrator can do the following
 
     -   User
+    
            	read user information
+           	
             add user
+            
             update user information
+            
             delete user
+            
     -   Product
+    
         	read product information
+        	
         	add product
+        	
         	update product information
+        	
         	delete product
+        	
     -   News
+    
             read catalog of news
+            
         	add news
+        	
             update news
+            
             delete news
+            
     -	Orders
+    
+    
         	read all orders
+        	
 
 
 Screenshots
